@@ -34,5 +34,11 @@ public class HogCon {
 		model.addAttribute("course", courseRepo.findById(id).get());
 		return "course";
 	}
+	
+	@RequestMapping("/instructor/{id}")
+	public String instructor(@PathVariable(value = "id") Long id, Model model) {
+		model.addAttribute("instructor", instructorRepo.findById(id).get());
+		return "instructor";
+	}
 
 }

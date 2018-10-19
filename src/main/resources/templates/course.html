@@ -4,8 +4,14 @@
 	<title>Hogwarts Course Catalog</title>
 </head>
 <body>
-	<h1 th:text="|${course.subject} ${course.cNumber}|">Course Title</h1>
-	<h3 th:text="|Instructor: ${course.instructor.lName}, ${course.instructor.fName}|">teacher</h3>
-	<h3 th:text="|Room: ${course.room}|"></h3>
+	<main>
+		<h1 th:text="|${course.subject} ${course.cNumber}|">Course Title</h1>
+		<h3 th:text="|Room: ${course.room}|">room no.</h3>
+		<a th:href="|/instructor/${course.instructor.id}|" th:text="|Instructor: ${course.instructor.lName}, ${course.instructor.fName}|">teacher</a>
+	</main>
+
+	<footer>
+		<a href="/">Return to All Courses</a>
+	</footer>
 </body>
 </html>

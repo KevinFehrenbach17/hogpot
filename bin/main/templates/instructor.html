@@ -1,1 +1,22 @@
-instructor.html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title th:text="|${instructor.fName} ${instructor.lName}|"></title>
+</head>
+<body>
+	<header>
+		<h1 th:text="|${instructor.fName} ${instructor.lName}|"></h1>
+	</header>
+	<h2>Courses:</h2>
+	<ul>
+		<li th:each="course : ${instructor.courses}">
+			<p th:text="|${course.subject} ${course.cNumber}|"></p>
+		</li>
+	</ul>
+
+	<footer>
+		<a href="/">Return to All Courses</a>
+	</footer>
+
+</body>
+</html>

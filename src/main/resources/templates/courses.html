@@ -8,14 +8,17 @@
 		<h1>Hogwarts School of Witchcraft and Wizardry</h1>
 		<h2>Course Catalog</h2>
 	</header>
-	<body>
+	<main>
 		<ul>
 			<li th:each="course : ${courses}">
-				<p th:text="|Course Id: ${course.id}|"></p>
-				<a href="|/course/${course.id}|" th:text="|${course.subject} ${course.cNumber}|"></a>
+				<a th:href="|/course/${course.id}|" th:text="|${course.subject} ${course.cNumber}|"></a>
 			</li>
 		</ul>
-	</body>
+	</main>
+
+	<footer>
+		<a href="/">Return to All Courses</a>
+	</footer>
 
 </body>
 </html>
