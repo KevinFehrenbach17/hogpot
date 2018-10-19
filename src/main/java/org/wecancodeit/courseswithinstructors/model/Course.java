@@ -17,6 +17,8 @@ public class Course {
 	private String room;
 	@ManyToOne
 	private Instructor instructor;
+	
+	private Course() {}
 
 	public Course(String subject, String cNumber, String room, Instructor instructor) {
 		this.subject = subject;

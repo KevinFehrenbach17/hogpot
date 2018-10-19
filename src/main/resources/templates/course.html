@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Hogwarts Course Catalog</title>
+</head>
+<body>
+	<h1 th:text="|${course.subject} ${course.cNumber}|">Course Title</h1>
+	<h3 th:text="|Instructor: ${course.instructor.lName}, ${course.instructor.fName}|">teacher</h3>
+	<h3 th:text="|Room: ${course.room}|"></h3>
+</body>
+</html>
