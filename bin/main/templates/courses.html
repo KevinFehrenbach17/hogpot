@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Hogwarts Course Catalog</title>
+</head>
+<body>
+	<header>
+		<h1>Hogwarts School of Witchcraft and Wizardry</h1>
+		<h2>Course Catalog</h2>
+	</header>
+	<main>
+		<ul>
+			<li th:each="course : ${courses}">
+				<a th:href="|/course/${course.id}|" th:text="|${course.subject} ${course.cNumber}|"></a>
+			</li>
+		</ul>
+		<a href="/instructors">See All Instructors</a>
+	</main>
+
+	<footer>
+		<a href="/">Return to All Courses</a>
+	</footer>
+
+</body>
+</html>

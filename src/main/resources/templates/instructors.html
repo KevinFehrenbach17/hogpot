@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Hogwarts Instructors</title>
+</head>
+<body>
+	<header>Hogwarts School of Witchcraft and Wizardry Instructors</header>
+	<main>
+		<ul>
+			<li th:each="instructor : ${instructors}">
+				<a th:href="|/instructor/${instructor.id}|" th:text="|${instructor.fName} ${instructor.lName}|"></a>
+			</li>
+		</ul>
+	</main>
+</body>
+</html>

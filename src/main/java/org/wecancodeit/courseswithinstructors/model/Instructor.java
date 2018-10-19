@@ -15,7 +15,7 @@ public class Instructor {
 
 	private Long id;
 	private String fName;
-	@OneToMany
+	@OneToMany(mappedBy="instructor")
 	private Set<Course> courses;
 
 	public Set<Course> getCourses() {
